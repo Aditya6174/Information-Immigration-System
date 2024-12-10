@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Immigration Information System</title>
+    <style>
+        body {
+            font-family: Verdana;
+            margin: 0;
+            padding: 0;
+            background-color: #260023; /* Light orange */
+        }
+        .container {
+            display: flex;
+            justify-content: space-between; /* Align items to the start and end of the container */
+            align-items: center; /* Center items vertically */
+            padding: 20px;
+        }
+        .header-left {
+            flex: 1; /* Take up remaining space */
+            text-align: left; /* Align text to the left */
+        }
+        .header-right {
+            flex: 1; /* Take up remaining space */
+            text-align: right; /* Align text to the right */
+        }
+        h1 {
+            color: #4d4dff; /* Dark blue */
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .sliding-text {
+            overflow: hidden;
+            position: relative;
+        }
+        .sliding-text span {
+            display: inline-block;
+            animation: slide-in 5s linear infinite;
+            color: #01f760; /* Vibrant green */
+            font-size: 24px; /* Increased font size */
+        }
+        @keyframes slide-in {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        p {
+            color: #ffffff6c;
+            font-size: 18px;
+            margin-bottom: 40px;
+            line-height: 1.5; /* Improve readability by increasing line height */
+        }
+        .next-page-link {
+            background-color: #ff4d4d; /* Red */
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            display: inline-block; /* Make it inline-block to adjust width to content */
+        }
+        .next-page-link:hover {
+            background-color: #ff3333; /* Light red */
+        }
+        img {
+            max-width: 100%; /* Ensure image doesn't exceed container width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Add some border-radius for rounded corners */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-left">
+            <h1>Information Immigration System</h1>
+            <div class="sliding-text">
+                <span>Connecting People All Over</span>
+            </div>
+            <p>We will be ensuring you people get the best information possible regularly about legal proceedings and to sustain a peaceful life of your own in India. We endeavor to assist and guide those seeking immigration opportunities worldwide. Whether you're looking for career opportunities, legal requirements, or tourism information, we have got you covered.</p>
+            <a href="/loginform/public/loginp.html" class="next-page-link">Click here to login into our page</a>
+        </div>
+        <div class="header-right">
+            <img src="lOGO1.png" alt="Image" />
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immigration Information System</title>
+    <style>
+        /* Updated styling with colors */
+        body {
+            font-family: Brush Script;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f1;
+        }
+        .header {
+            background-color: #011121; /* Dark blue */
+            color: #08e0dd; /* Blue */
+            text-align: center;
+            padding: 20px 0;
+        }
+        h1 {
+            text-decoration: underline; /* Add underline to h1 element */
+        }
+        .subtitle {
+            font-size: 1.2em;
+            font-style: italic;
+            color: #bbf791; /* Light yellow */
+        }
+        .dropdown-container {
+            text-align: center;
+            margin-top: 20px; /* Add margin to move the dropdowns below the header */
+        }
+
+        .dropdown {
+            display: inline-block;
+            position: relative;
+            margin: 0 20px; /* Add margin between dropdowns */
+        }
+
+        button {
+            border: none;
+            border-radius: 5px;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown-options {
+            display: none;
+            position: absolute;
+            overflow: auto;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+        }
+
+        .dropdown:hover .dropdown-options {
+            display: block;
+        }
+
+        .dropdown-options a {
+            display: block;
+            color: #000000;
+            padding: 5px;
+            text-decoration: none;
+            padding: 20px 40px;
+        }
+
+        .dropdown-options a:hover {
+            color: #0a0a23;
+            background-color: #ddd;
+            border-radius: 5px;
+        }
+        
+        /* Background image styling */
+        .background-image {
+            position: fixed; /* or "absolute" depending on your preference */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Ensure the image stays behind other content */
+            opacity: 0.5; /* Adjust the opacity as needed */
+        }
+
+        /* Currency Converter styling */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .currency-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .currency-container h1 {
+            margin-bottom: 10px;
+            color: #011121; /* Dark blue */
+        }
+
+        .input-box {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .currency {
+            display: flex;
+            align-items: center;
+        }
+
+        .box {
+            margin-right: 10px;
+        }
+
+        select {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .convert {
+            padding: 8px 15px;
+            background-color: #011121; /* Dark blue */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .convert:hover {
+            background-color: #08e0dd; /* Blue */
+        }
+
+        .result {
+            margin-top: 10px;
+        }
+
+        .error {
+            color: red;
+        }
+        /* Emergency numbers section styling */
+        .emergency-section {
+            background-color: #fff; /* White background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        .emergency-section h2 {
+            color: #011121; /* Dark blue */
+        }
+
+        .emergency-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .emergency-section li {
+            margin-bottom: 10px;
+        }
+
+        .emergency-section li span {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Background Image -->
+    <img src="UNI443194.jpg" alt="Migrants" class="background-image">
+    <div class="header">
+        <h1>Immigration Information System</h1>
+        <p class="subtitle">Connecting People All Over</p>
+    </div>
+    <div class="dropdown-container">
+        <div class="dropdown">
+            <button>Country</button>
+            <div class="dropdown-options">
+                <a href="US_con.html">United States</a>
+                <a href="bang_con.html">Bangladesh</a>
+                <a href="UK_con.html">United Kingdom</a>
+                <a href="aus_con.html">Australia</a>
+                <a href="can_con.html">Canada</a>
+                <a href="nep_con.html">Nepal</a>
+                <a href="sri_con.html">Sri Lanka</a>
+                <!-- Add more countries as needed -->
+            </div>
+        </div>
+        <div class="dropdown">
+            <button>Carrer oppurtunities</button>
+            <div class="dropdown-options">
+              <a href="job.html">Jobs</a>
+              <a href="Ugpage.html">Under-graduation</a>
+              <a href="pgpage.html">Post-graduation</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button>Legal requirements</button>
+            <div class="dropdown-options">
+              <a href="vp.html">Visa and Passport</a>
+              <a href="reg.html">Registration</a>
+              <a href="resp.html">Residence Permit</a>
+              <a href="wepe.html">Work/Education Permit</a>
+              <a href="hech.html">Healthcheck</a>
+              <a href="cusdec.html">Custom declarations</a>
+              <a href="comp.html">Compliance with laws</a>
+              <a href="renex.html">Renewal and Extensions</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button>Tourism</button>
+            <div class="dropdown-options">
+              <a href="tourism.html">Explore here</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button>Hotels and Accomodation</button>
+            <div class="dropdown-options">
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTAMRA&locusType=city&city=CTAMRA&country=IN&searchText=Amaravati&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">Andhra Pradesh</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTITA&locusType=city&city=CTITA&country=IN&searchText=Itanagar&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">Arunachal Pradesh</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTGAU&locusType=city&city=CTGAU&country=IN&searchText=Dispur&roomStayQualifier=2e0e&_uCurrency=INR&mmAreaTag=Dispur%7CARDIS&reference=hotel&type=area&rsc=1e2e0e">Assam</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTPAT&locusType=city&city=CTPAT&country=IN&searchText=Patna&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">Bihar</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTRPR&locusType=city&city=CTRPR&country=IN&searchText=Raipur%2C%20Chhattisgarh&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">Chattisgarh</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&city=CTGOI&checkout=03302024&roomStayQualifier=2e0e&locusId=CTGOI&country=IN&locusType=city&searchText=Goa&regionNearByExp=3&rsc=1e2e0e">Goa</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTXGR&locusType=city&city=CTXGR&country=IN&searchText=Gandhinagar&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">Gujrat</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTIXC&locusType=city&city=CTIXC&country=IN&searchText=Chandigarh&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">Haryana</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?_uCurrency=INR&checkin=03292024&checkout=03302024&city=ZNSHIM&country=IN&funnelType=getaway&locusId=ZNSHIM&locusType=zone&reference=hotel&roomStayQualifier=2e0e&rsc=1e2e0e&searchText=Shimla%20and%20Nearby&seekSummaryRequired=true&type=zone">Himachal Pradesh</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTIXR&locusType=city&city=CTIXR&country=IN&searchText=Ranchi&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">Jharkhand</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTBLR&locusType=city&city=CTBLR&country=IN&searchText=Bangalore&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">Karnataka</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTTRV&locusType=city&city=CTTRV&country=IN&searchText=Thiruvananthapuram&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">kerela</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTBHO&locusType=city&city=CTBHO&country=IN&searchText=Bhopal&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">Madhya Pradesh</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTBOM&locusType=city&city=CTBOM&country=IN&searchText=Mumbai&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">Maharashtra</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTIMP&locusType=city&city=CTIMP&country=IN&searchText=Imphal&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">Manipur</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTSHL&locusType=city&city=CTSHL&country=IN&searchText=Shillong&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">Meghalaya</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTAJL&locusType=city&city=CTAJL&country=IN&searchText=Aizawl&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">Mizoram</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTKOH&locusType=city&city=CTKOH&country=IN&searchText=Kohima&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">Nagaland</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTBBI&locusType=city&city=CTBBI&country=IN&searchText=Bhubaneshwar&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">Odisha</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTIXC&locusType=city&city=CTIXC&country=IN&searchText=Chandigarh&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">Punjab</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTJAI&locusType=city&city=CTJAI&country=IN&searchText=Jaipur&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">Rajasthan</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTXGA&locusType=city&city=CTXGA&country=IN&searchText=Gangtok&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">Sikkim</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTMAA&locusType=city&city=CTMAA&country=IN&searchText=Chennai&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">Tamil Nadu</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTHYDERA&locusType=city&city=CTHYDERA&country=IN&searchText=Hyderabad&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">Telengana</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTIXA&locusType=city&city=CTIXA&country=IN&searchText=Agartala&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">Tripura</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=RGDED&locusType=region&city=RGDED&country=IN&searchText=Dehradun%20District&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=region&rsc=1e2e0e">Uttarakhand</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTLKO&locusType=city&city=CTLKO&country=IN&searchText=Lucknow&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">Uttar Pradesh</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTCCU&locusType=city&city=CTCCU&country=IN&searchText=Kolkata&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">West Bengal</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTDEL&locusType=city&city=CTDEL&country=IN&searchText=Delhi&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">Delhi</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTIXZ&locusType=city&city=CTIXZ&country=IN&searchText=Port%20Blair&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">Andaman and Nicobar islands</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTIXC&locusType=city&city=CTIXC&country=IN&searchText=Chandigarh&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">Chandigarh</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTXDM&locusType=city&city=CTXDM&country=IN&searchText=Daman&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">Daman and Diu</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTIXJ&locusType=city&city=CTIXJ&country=IN&searchText=Jammu&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">Jammu and Kashmir</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTIXL&locusType=city&city=CTIXL&country=IN&searchText=Leh&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">Ladakh</a>
+              <a href="#">Lakshadweep</a>
+              <a href="https://www.makemytrip.com/hotels/hotel-listing/?checkin=03292024&checkout=03302024&locusId=CTXPC&locusType=city&city=CTXPC&country=IN&searchText=Pondicherry&roomStayQualifier=2e0e&_uCurrency=INR&reference=hotel&type=city&rsc=1e2e0e">Puducherry</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Embedding live news portal using iframe -->
+    <iframe src="https://www.ndtv.com/" width="100%" height="300" frameborder="0" scrolling="yes"></iframe>
+
+    <!-- Currency Conversion Calculator -->
+    <div class="container">
+        <div class="currency-container">
+            <p>Welcome to our currency converter! Here, you can convert various currencies to Indian Rupees (INR).</p>
+          <h1>Currency converter</h1>
+          <div class="input-box">
+            <label for="amount">Enter amount</label>
+            <input type="text" id="amount" placeholder="100" required/>
+          </div>
+          <div class="currency">
+            <div class="box">
+              <select class="select-option" name="from-currency" id="fromCurrency">
+                <option value="USD">United States Dollar (USD)</option>
+                <option value="AUD">Australian Dollar (AUD)</option>
+                <option value="GBP">British Pound Sterling (GBP)</option>
+                <option value="BDT">Bangladeshi Taka (BDT)</option>
+                <option value="CAD">Canadian Dollar (CAD)</option>
+                <option value="NPR">Nepalese Rupee (NPR)</option>
+                <option value="LKR">Sri Lankan Rupee (LKR)</option>
+              </select>
+            </div>
+            <div>
+              <span>TO</span>
+            </div>
+            <div class="box">
+              <select class="select-option" name="to-currency" id="toCurrency">
+                <option value="INR">Indian Rupee (INR)</option>
+              </select>
+            </div>
+            <button class="convert">Convert</button>
+            <p class="result"></p>
+            <p class="error"></p>
+          </div>
+        </div>
+      </div>
+
+    <script>
+        // Currency conversion logic
+        document.querySelector('.convert').addEventListener('click', function () {
+            const fromCurrency = document.getElementById('fromCurrency').value;
+            const toCurrency = document.getElementById('toCurrency').value;
+            const amount = document.getElementById('amount').value;
+
+            fetch(`https://api.exchangerate-api.com/v4/latest/${fromCurrency}`)
+                .then(res => res.json())
+                .then(data => {
+                    const rate = data.rates[toCurrency];
+                    if (rate) {
+                        const convertedAmount = amount * rate;
+                        document.querySelector('.result').innerText = `Converted amount: ${convertedAmount.toFixed(2)} ${toCurrency}`;
+                        document.querySelector('.error').innerText = '';
+                    } else {
+                        document.querySelector('.result').innerText = '';
+                        document.querySelector('.error').innerText = 'Invalid currency conversion';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.querySelector('.result').innerText = '';
+                    document.querySelector('.error').innerText = 'Something went wrong. Please try again later.';
+                });
+        });
+    </script>
+    <!-- Undergraduate Courses Section -->
+<div class="undergraduate-section">
+    <div class="header">
+        <h2>Undergraduate Courses in India</h2>
+        <p class="subtitle">Exploring Academic Opportunities</p>
+    </div>
+    <div class="courses">
+        <h3>Popular UG Courses:</h3>
+        <ul>
+            <p style="color : rgb(13, 1, 1);">In India, undergraduate (UG) education offers a diverse array of academic opportunities catering to a wide range of interests and career aspirations. Renowned for its rich cultural heritage and academic excellence, India boasts a plethora of UG courses across various disciplines. Among the most popular UG courses are Bachelor of Technology (B.Tech) and Bachelor of Engineering (B.E), which are highly sought after by aspiring engineers seeking specialization in fields such as computer science, mechanical engineering, and electrical engineering. Additionally, the Bachelor of Medicine and Bachelor of Surgery (MBBS) program stands as a cornerstone for individuals passionate about healthcare, providing a comprehensive foundation in medical sciences. For those inclined towards liberal arts and humanities, Bachelor of Arts (BA) programs offer a broad spectrum of subjects including literature, history, and philosophy, fostering critical thinking and cultural appreciation. Similarly, Bachelor of Science (BSc) programs cater to students interested in scientific inquiry and discovery, with specializations ranging from biology and chemistry to mathematics and physics. With prestigious institutions like the Indian Institutes of Technology (IITs), Indian Institutes of Management (IIMs), and renowned universities like Delhi University and Jawaharlal Nehru University (JNU), India's UG education landscape presents a wealth of opportunities for intellectual growth and professional development.</p>
+            <p>For more information you can <a href="Ugpage.html">visit</a> here.</p>
+            <!-- Add more UG courses as needed -->
+        </ul>
+        
+    </div>
+    <div class="institutions">
+        <h3>POPULAR PG COURSES IN INDIA</h3>
+        <ul>
+            <p>India offers a diverse array of postgraduate (PG) courses that cater to the advanced academic pursuits and career aspirations of students. PG education in India is characterized by its depth of specialization and emphasis on research and practical application. Among the prominent PG courses are Master of Technology (M.Tech) and Master of Engineering (M.E), which provide in-depth knowledge and specialized training in various engineering disciplines, including computer science, civil engineering, and electronics. Similarly, Master of Business Administration (MBA) programs are highly coveted by individuals aspiring to pursue careers in management and business leadership, offering rigorous training in strategic planning, finance, marketing, and organizational behavior. For those inclined towards healthcare and medical research, Master of Science (MSc) programs in disciplines such as biotechnology, pharmacology, and microbiology provide advanced theoretical knowledge and hands-on laboratory experience. Additionally, Master of Arts (MA) programs offer specialization in humanities and social sciences, enabling students to delve deeper into subjects such as literature, sociology, and political science. With esteemed institutions like the Indian Institutes of Management (IIMs), Indian Institutes of Technology (IITs), and top universities such as Delhi University and Jawaharlal Nehru University (JNU), India's PG education landscape offers ample opportunities for intellectual growth, professional development, and contributing to cutting-edge research and innovation.</p>
+            <p>For more information you can <a href="pgpage.html">visit</a> here.</p>
+            <!-- Add more prominent institutions as needed -->
+        </ul>
+    </div>
+    <!-- Emergency numbers section -->
+    <div class="emergency-section">
+        <h2>Emergency Contact Numbers</h2>
+        <ul>
+            <li><span>NATIONAL EMERGENCY NUMBER:</span> 112</li>
+            <li><span>POLICE:</span> 100 or 112</li>
+            <li><span>FIRE:</span> 101</li>
+            <li><span>AMBULANCE:</span> 102</li>
+            <li><span>Disaster Management Services:</span> 108</li>
+            <li><span>Women Helpline:</span> 1091</li>
+            <li><span>Women Helpline - (Domestic Abuse):</span> 181</li>
+            <li><span>Air Ambulance:</span> 9540161344</li>
+            <li><span>Aids Helpline:</span> 1097</li>
+            <li><span>Anti Poison (New Delhi):</span> 1066 or 011-1066</li>
+            <li><span>Disaster Management (N.D.M.A):</span> 1078, 01126701728</li>
+            <li><span>EARTHQUAKE / FLOOD / DISASTER (N.D.R.F Headquarters):</span> NDRF HELPLINE NO: 011-24363260 9711077372</li>
+            <li><span>Deputy Commissioner Of Police – Missing Child And Women:</span> 1094</li>
+            <li><span>COVID 19 HELPLINE:</span> 011-23978046 OR 1075</li>
+            <li><span>Railway Enquiry:</span> 139</li>
+            <li><span>Senior Citizen Helpline:</span> 14567</li>
+            <li><span>Medical Helpline in Andhra Pradesh, Gujarat, Uttarakhand, Goa, Tamil Nadu, Rajasthan, Karnataka, Assam, Meghalaya, M.P and U.P:</span> 108</li>
+            <li><span>Railway Accident Emergency Service:</span> 1072</li>
+            <li><span>Road Accident Emergency Service:</span> 1073</li>
+            <li><span>Road Accident Emergency Service On National Highway For Private Operators:</span> 1033</li>
+            <li><span>ORBO Centre, AIIMS (For Donation Of Organ) Delhi:</span> 1060</li>
+            <li><span>Kisan Call Centre:</span> 18001801551</li>
+            <li><span>Relief Commissioner For Natural Calamities:</span> 1070</li>
+            <li><span>Children In Difficult Situation:</span> 1098</li>
+            <li><span>National Poisons Information Centre - AIIMS NEW DELHI (24*7):</span> 1800116117, 011-26593677, 26589391</li>
+            <li><span>Poison Information Centre (CMC, Vellore):</span> 18004251213</li>
+            <li><span>Tourist Helpline:</span> 1363 or 1800111363</li>
+            <li><span>LPG Leak Helpline:</span> 1906</li>
+            <li><span>KIRAN MENTAL HEALTH (24/7):</span> 18005990019</li>
+            <li><span>Jeevan Suvidha Helpline:</span> 011-23994177</li>
+            <li><span>Indian Red Cross Society:</span> 011-23711551</li>
+        </ul>
+    </div>
+    <div class="survival-support">
+        <h2>SURVIVAL SUPPORT</h2>
+        <ul>
+            <li>Legal Assistance: The government offers legal aid and support to foreign migrants who may encounter legal challenges, such as visa issues, immigration matters, or disputes with employers.</li>
+            <li>Healthcare Services: Foreign migrants have access to healthcare services, including medical treatment, emergency care, and vaccinations, through government hospitals, clinics, and healthcare facilities.</li>
+            <li>Shelter and Housing: In certain cases, the government may provide temporary shelter or housing assistance to foreign migrants who are homeless or facing housing insecurity.</li>
+            <li>Education and Language Support: The government may offer educational programs and language courses to help foreign migrants integrate into Indian society and improve their language skills.</li>
+            <li>Employment and Vocational Training: Foreign migrants may receive assistance with finding employment opportunities, job training, and skills development programs to enhance their employability.</li>
+            <li>Social Welfare Programs: The government may administer social welfare programs, such as food assistance, financial aid, or welfare benefits, to support foreign migrants facing economic hardships.</li>
+            <li>Counseling and Psychological Support: Counseling services and mental health support may be available to foreign migrants experiencing emotional distress, trauma, or psychological challenges.</li>
+            <li>Community Integration Initiatives: The government may facilitate community integration initiatives, such as cultural events, language exchange programs, and community outreach activities, to promote social cohesion and inclusion among foreign migrants and local communities.</li>
+        </ul>
+    </div>
+    <!--Connections-->
+    <div class="Connections to find jobs in india">
+        <h2>CONNECTIONS TO FIND JOBS IN INDIA</h2>
+        <ul>
+            <li>Encourage individuals to connect with others while searching for jobs to expand their professional network and enhance their job search experience. Networking with professionals in their field or industry can provide valuable insights, advice, and potential job leads. Utilizing platforms like LinkedIn or attending industry events and job fairs offer opportunities to meet like-minded individuals, exchange ideas, and establish meaningful connections. By actively engaging with others in the job market, individuals can gain valuable knowledge, receive support, and even discover hidden job opportunities. Building relationships with peers, mentors, and industry insiders not only increases the likelihood of finding suitable employment but also opens doors to future career growth and development.</li>
+            <li>The given link for accessing such opportunities <a href="https://t.me/getjobss">Click here</a></li>
+        </ul>
+    </div>
+    <!--disciplinary rules in india-->
+    <div class="disciplinary rules in india">
+        <h2>DISCIPLINARY RULES TO BE FOLLOWED IN INDIA</h2>
+        <ul>
+            The Indian government has established disciplinary rules for foreign migrants to ensure compliance with local laws and regulations while residing in the country. Foreign migrants are typically required to abide by visa regulations, which include maintaining valid documentation, adhering to visa conditions, and obeying immigration laws. Additionally, they must respect Indian customs, traditions, and cultural norms. It's essential for foreign migrants to refrain from engaging in activities that may jeopardize public safety, security, or public order. They should also refrain from participating in unlawful activities, such as unauthorized employment or overstaying their visa. Failure to comply with these disciplinary rules may result in legal consequences, including fines, deportation, or other penalties, as stipulated by Indian immigration authorities.
+        </ul>
+    </div>
+    <div class="return-button">
+        <p><a href="index.html">Return to Previous Page</a></p>
+    </div>
+</div>
+</body>
+</html>

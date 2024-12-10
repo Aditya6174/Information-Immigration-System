@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Immigration System Login</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #007bff;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .login-container {
+        background-image: url('loginp.avif');
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        width: 400px;
+        background-color: rgba(255, 255, 255, 0.9); /* Adding opacity to background */
+    }
+    
+    .login-container h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #6c757d; /* Changing the color of the title */
+    }
+    
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    
+    .login-container input[type="submit"] {
+        background-color: #28a745; /* Change button color */
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 10px;
+        cursor: pointer;
+        width: 100%;
+    }
+    
+    .login-container input[type="submit"]:hover {
+        background-color: #218838; /* Change hover color */
+    }
+    
+    .remember-me {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        color: #6c757d; /* Changing the color of the "Remember me" text */
+    }
+    
+    .remember-me input[type="checkbox"] {
+        margin-right: 10px;
+    }
+</style>
+</head>
+<body>
+<div class="login-container">
+    <h2 style="color: #6c757d;">Immigration System Login</h2>
+    <form action="#" method="post" onsubmit="return redirectToBasics()">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <div class="remember-me">
+            <input type="checkbox" id="remember" name="remember">
+            <label for="remember" style="color: #6c757d;">Remember me</label>
+        </div>
+        <input type="submit" value="Login">
+    </form>
+</div>
+<script>
+    function redirectToBasics() {
+        window.location.href = "basics.html";
+        return false; // Prevent form submission
+    }
+</script>
+</body>
+</html>
